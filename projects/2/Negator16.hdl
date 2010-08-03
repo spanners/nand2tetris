@@ -1,0 +1,7 @@
+CHIP Negator16 {
+IN in[16], sel;
+OUT out[16];
+PARTS:
+Not16(in=in, out=negatedIn);
+Mux16(a=in, b=negatedIn, sel=sel, out=out);
+}

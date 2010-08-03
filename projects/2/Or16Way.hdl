@@ -1,0 +1,14 @@
+
+/**
+ * Or16Way - Or's all the 16 bits of input, output is 1 iff any of the bits were lit
+ */
+ 
+CHIP Or16Way{
+	IN in[16];
+	OUT out;
+	
+	PARTS:
+	Or8Way(in=in[0..7], out=lower);
+	Or8Way(in=in[8..15], out=upper);
+	Or(a=lower, b=upper, out=out);
+}
