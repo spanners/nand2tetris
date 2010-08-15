@@ -1,0 +1,23 @@
+// Adds 1+...+100.
+    @i    // i refers to some mem. location. @i sets A to the address of i, and allows you to set the value stored at that address with M
+    M=1   // i=1
+    @sum  // sum refers to some mem. location
+    M=0   // sum=0
+(LOOP)
+    @i    // allows you to set i again
+    D=M   // D=i. D is used solely to store data values
+    @100  // immediate addressing. sets A to 100
+    D=D-A // D=D-100
+    @END  // END refers
+    D;JGT // if D > 0 goto END
+    @i
+    D=M   // D=i
+    @sum
+    M=M+D // sum=sum+i
+    @i
+    M=M+1 // i=i+1
+    @LOOP
+    0;JMP
+(END)
+    @END
+    0;JMP // infinite loop
