@@ -1,9 +1,10 @@
 //  Russian Peasant Multiplication Algorithm
 
 //  def peasant(R0, R1):
-//    result = 0
-//    mask = 1
+//    R2 = 0
+//    bit = 0
 //    i = 0
+//    mask = 1
 //    while i < 16:
 //      bit = R1 & mask
 //      if bit != 0:
@@ -11,14 +12,16 @@
 //      R0 += R0
 //      mask += mask
 //      i += 1
-//    return result
+//    return R2
 
 @R2
 M=0
-@mask
-M=1
+@bit
+M=0
 @i
 M=0
+@mask
+M=1
 
 (LOOP)
   @i
