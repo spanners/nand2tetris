@@ -3,6 +3,13 @@ nand2tetris
 
 See <https://www.nand2tetris.org>.
 
+This repository contains solutions to the exercises in the book NAND 2 Tetris, 
+which is also known as "The Elements of Computing Systems" (TECS).
+
+
+About the file `tecs-software-suite-2.5.zip`
+============================================
+
 Zip Contents:
 -------------
 This zip file contains all the software tools that support 
